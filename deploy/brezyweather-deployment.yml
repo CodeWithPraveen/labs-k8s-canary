@@ -20,6 +20,6 @@ spec:
         resources:
           limits:
             memory: 128Mi # MiB or Mebibytes
-            cpu: 500m # millicores
+            cpu: 100m # millicores
         ports:
         - containerPort: 80
