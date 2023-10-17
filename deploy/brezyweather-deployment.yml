@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: brezyweather
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: brezyweather
+      version: '1.0'
+  template:
+    metadata:
+      labels:
+        app: brezyweather
+        version: '1.0'
+    spec:
+      containers:
+      - name: brezyweather
+        image: codewithpraveen/labs-k8s-brezyweather:1.0
+        resources:
+          limits:
+            memory: 128Mi # MiB or Mebibytes
+            cpu: 500m # millicores
+        ports:
+        - containerPort: 80

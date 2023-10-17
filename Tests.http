@@ -1,0 +1,12 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+
+@hostname=localhost
+@port=5153
+
+###
+// Get weather data 
+GET http://{{hostname}}:{{port}}/api/v1/weather
+
+###
+// Get city data
+GET http://{{hostname}}:{{port}}/api/v2/city
